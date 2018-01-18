@@ -15,10 +15,8 @@
 
 ### Nefry BT通常時
 
-![](https://i.gyazo.com/d3ff6528fff0ba2a3c4a6c29494dc919.jpg)
+![](https://i.gyazo.com/d3ff6528fff0ba2a3c4a6c29494dc919.jpg)
 
 ### Light Sleep
 
-
-
 ![](https://i.gyazo.com/503c45f7987931d3486c43ff644aa1ab.jpg)
