@@ -12,7 +12,7 @@ AmbientはIoTデーターの可視化サービスです。
 マイコンなどから送られるセンサーデーターを受信し、蓄積し、可視化(グラフ化)します。
 ```
 
-様々なマイコンボードに対応している
+様々なマイコンボードに対応しています。
 
 ![](https://ambidata.io/wp/wp-content/uploads/2016/08/chart2.jpg)
 
@@ -53,6 +53,8 @@ void loop() {
 GroveのA0(A1)ピンにSound SenserもしくはLight Sensorを差し込みましょう。
 
 > 今回の研修の場合は(Nefry BT R2ではA0)
+
+![](https://i.gyazo.com/c67a34a72d8b01b1f3b6b2797c08737d.jpg)
 
 ## Nefry BTのWebコンソールでキーを設定
 
