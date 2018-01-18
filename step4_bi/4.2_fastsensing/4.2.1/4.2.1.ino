@@ -4,7 +4,8 @@ String BASE_URL = "http://f-io.net/d1/";
 String DEVICE_TOKEN = ""; //デバイストークンを指定
 String CHANNEL = ""; //利用するチャンネルを指定
 
-String ENDPOINT = BASE_URL + DEVICE_TOKEN + "/?" + CHANNEL + "=";
+//String ENDPOINT = BASE_URL + DEVICE_TOKEN + "/?" + CHANNEL + "=";
+String ENDPOINT = "https://qiita.com/n0bisuke/items/26ce42781f00bb43beec.json";
 int analog;
   
 void setup() {
@@ -15,7 +16,7 @@ void loop() {
   HTTPClient http;
   
   analog = analogRead(A1);
-  http.begin(ENDPOINT + analog);
+  http.begin(ENDPOINT);
   int httpCode = http.GET();
   
   if(httpCode > 0) {
@@ -32,5 +33,5 @@ void loop() {
   
   http.end();
 
-  delay(10000);
+  delay(5000);
 }

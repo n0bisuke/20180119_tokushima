@@ -13,7 +13,13 @@
 
 ![](https://i.gyazo.com/d435df3d57b89b3849caa398404b3f36.png)
 
+通常に使用していると**0.16A~0.26A**がESP32の消費電力（理論値）になります。
+
+> [アンペア数が高い（消費電力が大きい）家電を知って、上手に節約しよう](https://enechange.jp/articles/large-consumption-appliances)
+
 ### Nefry BT通常時
+
+**約0.13A**
 
 ![](https://i.gyazo.com/d3ff6528fff0ba2a3c4a6c29494dc919.jpg)
 
