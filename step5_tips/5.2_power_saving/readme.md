@@ -23,6 +23,10 @@
 
 ![](https://i.gyazo.com/d3ff6528fff0ba2a3c4a6c29494dc919.jpg)
 
-### Light Sleep
+### Light Sleepモード
+
+以下のコードをNefry BTに書き込んでみましょう！
+
+[Light Sleep](https://github.com/n0bisuke/20180119_tokushima/blob/master/step5_tips/5.2_power_saving/5.2.1_light_sleep/5.2.1_light_sleep.ino)
 
 ![](https://i.gyazo.com/503c45f7987931d3486c43ff644aa1ab.jpg)
