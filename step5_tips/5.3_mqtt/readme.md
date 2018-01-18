@@ -79,4 +79,38 @@ Subscriber(サブスクライバー) = データの受信側です。
 
 ## 3. Brokerについて学ぼう
 
-最初に紹介したとおり、
+最初に紹介したとおり、MQTTのサーバーにあたるのがブローカーです。
+
+通常はブローカーは自分でサーバーを用意するか、有料サービスを契約するかで利用できるようになります。
+
+![](https://i.gyazo.com/17221f80f75a99a3e88cda6c4a3a907e.png)
+
+今回は[Mosquitto](https://mosquitto.org/)のサーバーをテスト的に利用しました。
+
+Mosquittoはオープンソースのブローカーサービスで、通常は自分のサーバーに組み込んで利用しますが、開発者がテストしやすいように公開してくれています。
+
+![](https://i.gyazo.com/3480e886dd3e6bf497742f114acb4b62.png)
+
+無料で使えますが、基本的にデータは公開されてしまうので注意しましょう。
+
+### MQTTのブローカーサービス
+
+* [Nifty](https://cloud.nifty.com/service/mqtt.htm)
+* [Milkcocoa](https://mlkcca.com/)
+* [Azure IoT Hub](https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-mqtt-support)
+* [AWS IoT](https://aws.amazon.com/jp/iot-core/features/)
+
+など
+
+### Node.jsで自分で立ててみる
+
+Node.jsはサーバーサイドJavaScriptと呼ばれるWebのサーバーサイド言語です。活躍の場が増えていて、Web以外にもデバイスやデスクトップアプリ、スマホアプリなど様々な場所で活躍しています。JavaScript自体はWebブラウザでも利用できるためIoT時代には相性の良いプログラミング環境です。
+
+以下のライブラリを使うとMQTTのPub/SubとBrokerが実装可能です。
+
+* Publisher/Subscriberの実装
+    * [https://www.npmjs.com/package/mqtt](https://www.npmjs.com/package/mqtt)
+* Brokerの実装
+    * [Mosquitto](https://mosquitto.org/)
+    * [Mosca](http://www.mosca.io/)
+
