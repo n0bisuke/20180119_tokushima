@@ -1,8 +1,8 @@
 #include <HTTPClient.h>
 
 String BASE_URL = "http://f-io.net/d1/";
-String DEVICE_TOKEN = "metjeb44meqxgz6d"; //デバイストークンを指定
-String CHANNEL = "5o2bc524"; //利用するチャンネルを指定
+String DEVICE_TOKEN = ""; //デバイストークンを指定
+String CHANNEL = ""; //利用するチャンネルを指定
 
 String ENDPOINT = BASE_URL + DEVICE_TOKEN + "/?" + CHANNEL + "=";
 int analog;
@@ -23,8 +23,8 @@ void loop() {
     
     if(httpCode == HTTP_CODE_OK) {
       Serial.println("data:" + (String)analog);
-      String payload = http.getString();
-      Serial.println(payload);
+//      String payload = http.getString();
+//      Serial.println(payload);
     }
   } else {
     Serial.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
