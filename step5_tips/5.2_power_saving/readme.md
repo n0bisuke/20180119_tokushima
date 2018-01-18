@@ -37,7 +37,17 @@
 
 ### Deep Sleepモード
 
+以下のコードをNefry BTに書き込んでみましょう。
+
+[Deep Sleep](https://github.com/n0bisuke/20180119_tokushima/blob/master/step5_tips/5.2_power_saving/5.2.2_deep_sleep/5.2.2_deep_sleep.ino)
+
+5秒ごとに再起動を繰り返しますが、loop関数までは読み込まれず、指定した時間ごとに起動して、setup関数の中に記述してある処理を実行します。
+
+1時間に一回データをポストしてあとは落としておく、などといった運用が考えられそうです。
+
 ![](https://i.gyazo.com/594ad90cf2c8700ac45eb2fe29c081ed.jpg)
 
 **0.01A**になりました。
 もっと詳細に調べられる測定器で図ると違いが分かりやすいかもしれません。
+
+
