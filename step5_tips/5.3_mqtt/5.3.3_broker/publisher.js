@@ -4,6 +4,8 @@ const mqtt = require('mqtt');
 const client = mqtt.connect({
     host: 'mosquitto.org',
     port: 1883,
+    keepalive: 0,
+    qos: 1
 });
 
 client.on('connect', () => console.log('publisher.connected.'));
