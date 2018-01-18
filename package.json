@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/n0bisuke/20180119_tokushima/issues"
   },
-  "homepage": "https://github.com/n0bisuke/20180119_tokushima#readme"
+  "homepage": "https://github.com/n0bisuke/20180119_tokushima#readme",
+  "dependencies": {
+    "mosca": "^2.7.0",
+    "mqtt": "^2.15.1",
+    "ngrok": "^2.2.25"
+  }
 }

@@ -25,7 +25,7 @@ void loop() {
     }
   }else{
     mqttClient.publish(TOPIC, "hello world");
-    Serial.println("Push");
+    Serial.println("published");
     delay(2000);    
   }
   
