@@ -12,7 +12,7 @@ https://fastsensing.com/ja/author/fastsensing-webmaster/
 ファストセンシングはセンサの監視・記録のための汎用的な機能をAPIで提供するクラウドサービスです。クラウド側の開発をすることなく、ネットワークとセンサを組み合わせたデータモニタリングシステムを構築できます。ファストセンシングは完全な従量課金により提供されますので、小規模かつ短期間のシステムから、大規模なスケールが必要なシステムまで、幅広い用途でご利用いただけます。
 ```
 
-![](https://ambidata.io/wp/wp-content/uploads/2016/08/chart2.jpg)
+![](https://i.gyazo.com/137b247b9ac08086ecf4a1b735dbcff8.png)
 
 ## ユーザー登録
 
