@@ -188,3 +188,5 @@ void loop() {
   delay(10000);
 }
 ```
+
+参考: https://qiita.com/fastsensing/items/3d6cd7f14f4fde5c394e
