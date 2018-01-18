@@ -18,10 +18,105 @@ https://fastsensing.com/ja/author/fastsensing-webmaster/
 
 メールアドレスとパスワードを入力して登録しましょう。
 
-## ログインしてデバイス登録
+![](https://i.gyazo.com/192210aa46f1f577172b4779d1702a94.png)
+
+メールアドレスに確認メールが送られてくるのでリンクをクリックしましょう。
+
+## ログインしてホーム画面へ
 
 ![](https://i.gyazo.com/bfbc485167fa3000963bf6b67e36285e.png)
 
-デバイス登録を行います。
+![](https://i.gyazo.com/25ee2ea61ec62743e4fe433dc0d5cbbd.png)
 
-![](https://i.gyazo.com/af1a07b70e8ec784b388d9f1d421689b.png)
+最初はメニュー表示だけの画面が表示されます。
+
+## スタブデバイスを追加する
+
+こちらのリンクからスタブデバイスを追加します。
+
+https://console.fastsensing.com/stub_devices
+
+現状だと、ログイン後のページから遷移できない様子なので注意しましょう。
+
+![](https://i.gyazo.com/249cd591feb954309a14bf55e2e00e03.png)
+
+ボタンをクリックすると登録が完了して画面が切り替わります。
+
+![](https://i.gyazo.com/32400e4cd249c3ac08da0ac59285dd4f.png)
+
+* デバイス
+* チャンネル1
+* チャンネル2
+* チャンネル3
+
+の値を確認しましょう。後ほど利用します。
+
+## Nefry BTにプログラムを書き込む
+
+以下のプログラムを用意します。
+
+```4.2.ino
+#include <NefryFastSensing.h>
+//インスタンスを作成します
+NefryFastSensing fastSensing;
+float floatData = 0;
+float intData = 0;
+
+void setup() {
+  //FastSensingで必要な情報を入力し、初期化をします
+  //https://console.fastsensing.com/devicesからデバイスとチャンネル
+  //begin(デバイス、チャンネル1、チャンネル2、チャンネル3)
+  fastSensing.begin("device", "channel1", "channel2", "channel3");
+}
+
+void loop() {
+  //FastSensingに送るデータを作成します
+  //setValue(チャンネル、データ)
+  fastSensing.setValue(0, floatData);
+  fastSensing.setValue(1, intData);
+
+  //setValueで入れた値をFastSensingに送信します
+  //push()
+  fastSensing.push();
+  
+  floatData += 0.1;
+  intData++;
+  delay(10000);
+
+}
+```
+
+* デバイス
+* チャンネル1
+* チャンネル2
+* チャンネル3
+
+の4つの値を自身のものにしてください。
+
+![](https://i.gyazo.com/cd691d180b850257d3a2514f74f77643.png)
+
+変更出来たら書き込みをしてください。
+
+## 配線
+
+GroveのA0(A1)ピンにSound SenserもしくはLight Sensorを差し込みましょう。
+
+> 今回の研修の場合は(Nefry BT R2ではA0)
+
+![](https://i.gyazo.com/c67a34a72d8b01b1f3b6b2797c08737d.jpg)
+
+## 確認
+
+チャンネルを指定します。
+
+![](https://i.gyazo.com/a36962a2ff2dfc8138613b65123fae50.png)
+
+作成ボタンを押すと、グラフが表示されました。
+
+![](https://i.gyazo.com/f57d655a1aa487951b31b202f0fa0310.png)
+
+このように簡単にデータをクラウドに送信してグラフ化が出来ました。
+
+## 2018/1/19現在 不安定です。
+
+https://github.com/Nefry-Community/arduino-esp32/issues/91

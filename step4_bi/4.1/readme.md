@@ -26,7 +26,7 @@ AmbientはIoTデーターの可視化サービスです。
 
 ![](https://i.gyazo.com/ec26b7309bf4d0472f863f3740f6703e.png)
 
-## Nefry BTにコードを書き込む
+## Nefry BTにプログラムを書き込む
 
 ```4.1.ino
 #include <NefryAmbient.h>

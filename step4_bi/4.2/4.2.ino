@@ -1,30 +1,28 @@
-#include <Nefry.h>
-#include <NefryCloud.h>
-
-NefryCloud nefryCloud;
-
-void onpush(String message);
+#include <NefryFastSensing.h>
+//インスタンスを作成します
+NefryFastSensing fastSensing;
+float floatData = 0;
+float intData = 0;
 
 void setup() {
-  nefryCloud.begin("n0bisuke","bb43e25cec77eb9d20127eb25612223ccd37bcaf647fc24973a646d1abe69f8e");//サイトで登録したuser,メールで受け取ったapikeyを入力してください
-  nefryCloud.on(onpush);
-  Nefry.setProgramName("NefryBT Nefry Cloud");
-  analogRead(A0);
+  //FastSensingで必要な情報を入力し、初期化をします
+  //https://console.fastsensing.com/devicesからデバイスとチャンネル
+  //begin(デバイス、チャンネル1、チャンネル2、チャンネル3)
+  fastSensing.begin("metjeb44meqxgz6d", "5o2bc524", "3ogtxpb2", "36mefvyz");
 }
 
 void loop() {
-  nefryCloud.loop();
-}
+  //FastSensingに送るデータを作成します
+  //setValue(チャンネル、データ)
+  fastSensing.setValue(0, floatData);
+  fastSensing.setValue(1, intData);
 
-void onpush(String message) {//Nefryクラウド(仮)から通知が来ます
-  Nefry.print("onpush : ");
-  Nefry.println(message);
+  //setValueで入れた値をFastSensingに送信します
+  //push()
+  fastSensing.push();
+  
+  floatData += 0.1;
+  intData++;
+  delay(10000);
 
-  if(message.equals("red")){
-    Nefry.setLed(255,0,0);
-  }else if(message.equals("green")){
-    Nefry.setLed(0,255,0);
-  }else if(message.equals("blue")){
-    Nefry.setLed(0,0,255);
-  }
 }
