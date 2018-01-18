@@ -1,28 +1,36 @@
-#include <NefryFastSensing.h>
-//インスタンスを作成します
-NefryFastSensing fastSensing;
-float floatData = 0;
-float intData = 0;
+#include <HTTPClient.h>
 
+String BASE_URL = "http://f-io.net/d1/";
+String DEVICE_TOKEN = "metjeb44meqxgz6d"; //デバイストークンを指定
+String CHANNEL = "5o2bc524"; //利用するチャンネルを指定
+
+String ENDPOINT = BASE_URL + DEVICE_TOKEN + "/?" + CHANNEL + "=";
+int analog;
+  
 void setup() {
-  //FastSensingで必要な情報を入力し、初期化をします
-  //https://console.fastsensing.com/devicesからデバイスとチャンネル
-  //begin(デバイス、チャンネル1、チャンネル2、チャンネル3)
-  fastSensing.begin("metjeb44meqxgz6d", "5o2bc524", "3ogtxpb2", "36mefvyz");
+  Serial.begin(115200);
 }
 
 void loop() {
-  //FastSensingに送るデータを作成します
-  //setValue(チャンネル、データ)
-  fastSensing.setValue(0, floatData);
-  fastSensing.setValue(1, intData);
-
-  //setValueで入れた値をFastSensingに送信します
-  //push()
-  fastSensing.push();
+  HTTPClient http;
   
-  floatData += 0.1;
-  intData++;
-  delay(10000);
+  analog = analogRead(A1);
+  http.begin(ENDPOINT + analog);
+  int httpCode = http.GET();
+  
+  if(httpCode > 0) {
+    Serial.printf("[HTTP] GET... code: %d\n", httpCode);
+    
+    if(httpCode == HTTP_CODE_OK) {
+      Serial.println("data:" + (String)analog);
+      String payload = http.getString();
+      Serial.println(payload);
+    }
+  } else {
+    Serial.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
+  }
+  
+  http.end();
 
+  delay(10000);
 }
