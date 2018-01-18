@@ -50,3 +50,6 @@ Publisher(パブリッシャー) = データの送信側です。
 
 ## 2. Subscriberを実装してみよう
 
+[こちらのコード](https://github.com/n0bisuke/20180119_tokushima/blob/master/step5_tips/5.3_mqtt/5.3.2_subscriber/5.3.2_subscriber.ino)をNefryに書き込んで実行してみましょう。
+
+![](https://i.gyazo.com/7d02cd7509e64017ddd3f1a3c0e69aaf.gif)
