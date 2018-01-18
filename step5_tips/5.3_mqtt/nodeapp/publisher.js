@@ -2,8 +2,8 @@
 
 const mqtt = require('mqtt');
 const client = mqtt.connect({
-    host: '0.tcp.ngrok.io',
-    port: 14293,
+    host: 'mosquitto.org',
+    port: 1883,
 });
 
 client.on('connect', () => console.log('publisher.connected.'));

@@ -23,7 +23,7 @@ WebSocketではサーバーとクライアントだけで双方向通信をし�
 
 ![](https://dotstud.io/img/blog/141/1.png)
 
-## Publisherを実装してみよう
+## 1. Publisherを実装してみよう
 
 Publisher(パブリッシャー) = データの送信側です。
 
@@ -47,4 +47,6 @@ Publisher(パブリッシャー) = データの送信側です。
 0.14A程度でした。
 
 ![](https://i.gyazo.com/33b1601aedc85a196e3f656aa112841d.jpg)
+
+## 2. Subscriberを実装してみよう
 
