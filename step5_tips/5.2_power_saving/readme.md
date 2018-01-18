@@ -29,4 +29,15 @@
 
 [Light Sleep](https://github.com/n0bisuke/20180119_tokushima/blob/master/step5_tips/5.2_power_saving/5.2.1_light_sleep/5.2.1_light_sleep.ino)
 
+**0.02A**になりました。
+
 ![](https://i.gyazo.com/503c45f7987931d3486c43ff644aa1ab.jpg)
+
+通常時の0.13Aから0.02Aということで、電池駆動したときに約6倍長持ちさせることができます。
+
+### Deep Sleepモード
+
+![](https://i.gyazo.com/594ad90cf2c8700ac45eb2fe29c081ed.jpg)
+
+**0.01A**になりました。
+もっと詳細に調べられる測定器で図ると違いが分かりやすいかもしれません。
