@@ -1,5 +1,5 @@
 
-## Azure IoT Hub (紹介)
+## Azure IoT Hub (Tips紹介のみ)
 
 https://azure.microsoft.com/ja-jp/services/iot-hub/
 
