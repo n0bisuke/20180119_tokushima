@@ -24,6 +24,8 @@ Nefry BTをセンサー側として利用して、パソコンにデータを送
 
 [Nefry BT（ESP32）からBLEでNode.jsにデータを送ってみよう](https://dotstud.io/blog/nefrybt-ble-bluetooth-peripheral/)をみながら進めてみよう。
 
+![](https://i.gyazo.com/2f98195bf2d9c5e72dadd5bf1ae88cf0.png)
+
 ![](https://dotstud.io/img/blog/143/5.gif)
 
 ### 補足: Nefry BTをBLEセントラルにしてデータをインターネットに送る
