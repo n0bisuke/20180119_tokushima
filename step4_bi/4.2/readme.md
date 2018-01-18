@@ -93,9 +93,25 @@ void loop() {
 
 の4つの値を自身のものにしてください。
 
-![](https://i.gyazo.com/cd691d180b850257d3a2514f74f77643.png)
+![](https://i.gyazo.com/cd691d180b850257d3a2514f74f77643.png)
 
 変更出来たら書き込みをしてください。
+
+## チャンネル
+
+ファストセンシングではデータの種類によって送信先を変更できるようにチャンネルという概念があります。
+
+先ほどのNefry BTに書き込んだコードで
+
+```
+fastSensing.setValue(0, floatData);
+```
+
+と指定している箇所がありますが、
+
+チャンネル1の場合は`fastSensing.setValue(0, データ)`とし、チャンネル2の場合は`fastSensing.setValue(1, floatData)`、チャンネル3の場合は`fastSensing.setValue(2, floatData)`となります。
+
+管理画面側でもチャンネル毎にデータを確認しましょう。
 
 ## 配線
 
@@ -116,6 +132,17 @@ GroveのA0(A1)ピンにSound SenserもしくはLight Sensorを差し込みまし
 ![](https://i.gyazo.com/f57d655a1aa487951b31b202f0fa0310.png)
 
 このように簡単にデータをクラウドに送信してグラフ化が出来ました。
+
+他にも
+
+* リアルタイムグラフ
+* パネル
+* イメージマップ
+* 表
+
+など色々なビューがあるので試してみましょう。
+
+![](https://i.gyazo.com/0055cb1c1d1526e1aced563a36b4dfca.png)
 
 ## 2018/1/19現在 不安定です。
 
