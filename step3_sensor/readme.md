@@ -29,6 +29,12 @@ Nefry BTでのGroveセンサーの使い方は簡単で、Grove用のポート�
 
 ## Nefry BTにコードを書き込む
 
+[Light Sensorのコード](https://github.com/n0bisuke/20180119_tokushima/blob/master/step3_sensor/3.1_light_sensor/3.1_light_sensor.ino)を書き込んでみましょう。
+
+Arduino IDEのファイル -> 新規ファイルから新規のファイルを作成し、コードを貼り付けて書き込みをしてみましょう。
+
+センサーをA0に刺していて、プログラム的にA1となってますが シルク印刷のミスとなっています。（すみません）
+
 ## 値の確認 / シリアルモニタ
 
 ツール -> シリアルモニタを選択しましょう。
@@ -36,3 +42,13 @@ Nefry BTでのGroveセンサーの使い方は簡単で、Grove用のポート�
 ![](https://i.gyazo.com/92f5d6b5ad2de451ccece0b1a6a777f1.png)
 
 値が確認できます。
+
+## Nefry BTの再起動
+
+再起動の仕方を紹介します。
+
+左下のResetボタンを押すとNefry BTが再起動します。
+
+調子が悪い時は再起動しましょう。
+
+USBの抜き差しでも再起動できますが、シリアルモニタが切断されてしまうのでResetボタンを利用した方が開発しやすいです。
