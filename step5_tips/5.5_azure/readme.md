@@ -13,7 +13,7 @@ https://azure.microsoft.com/ja-jp/services/iot-hub/
 
 ## Nefry BTにAzure IoT Hub向けのライブラリがあります。
 
-このような形で利用
+このような形で利用できます。
 
 ```5.5.ino
 #include <NefryAzureIoTHub.h>
