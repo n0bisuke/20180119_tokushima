@@ -66,6 +66,8 @@ Publisher(パブリッシャー) = データの送信側です。
 
 Subscriber(サブスクライバー) = データの受信側です。
 
+**[手順記事を参照しましょう！！](https://dotstud.io/blog/nefry-bt-connect-mqtt/)**
+
 [こちらのコード](https://github.com/n0bisuke/20180119_tokushima/blob/master/step5_tips/5.3_mqtt/5.3.2_subscriber/5.3.2_subscriber.ino)をNefryに書き込んで実行してみましょう。
 
 受信してみましょう。
