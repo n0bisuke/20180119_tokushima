@@ -5,7 +5,7 @@
 
 void setup() {
   Serial.begin(115200);                //Start the Serial connection
-  pinMode(LIGHT_SIG, INPUT);
+  pinMode(SOUND_SIG, INPUT);
   NefryDisplay.begin();
 }
 
