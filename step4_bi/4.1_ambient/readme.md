@@ -26,6 +26,11 @@ AmbientはIoTデーターの可視化サービスです。
 
 ![](https://i.gyazo.com/ec26b7309bf4d0472f863f3740f6703e.png)
 
+## ログインできない人
+
+* id: rkv43994@pdold.com
+* pass: hogehoge
+
 ## Nefry BTにプログラムを書き込む
 
 ```4.1.ino
