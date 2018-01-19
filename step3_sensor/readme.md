@@ -104,9 +104,7 @@ Nefry.setLed(255,255,255,100);
 Nefry.setLed(255,255,255,0);
 ```
 
-
+## チャレンジ2
 
 * Sound Sensorに付け替えて、センサーの値を取得してみよう。
 * コードは[こちら](https://github.com/n0bisuke/20180119_tokushima/blob/master/step3_sensor/3.2_sound_sensor/3.1_sound_sensor.ino)になります。
-
-## 
